@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="main.css">
 </head>
 <header>
-<div class="header"> The Utz</div>
+	<div class="header"> The Utz</div>
 
 	<nav class="navbar">
 
@@ -21,32 +21,57 @@
 
 
 <body>
-<h1> Start Menu</h1>
-	<main>
-		<article>
+<main class="productlist">
+<template id="productTemplate">
+
+      <article class="products">
+
+        <img class="product_image" src="https://kea-alt-del.dk/t5/site/imgs/medium//guzni-md.jpg" alt="" />
+
+         <div class="icons">
+         <img class="vegetarian hidden" src="fotos/6850673.png" alt="v">
+        </div>
 
 
-			<div class="imgbox">
+        <section class="productbody">
+          <h2 class="data_name">Some really delisious dish</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatum, velit inventore. Architecto nihil quis temporibus aut.
+          </p>
+          <h3 class="data_price">50,-</h3>
+          <h4 class="data_discount">Discount?,-</h4>
 
-			</div>
-			<div class="content">
-				<h2> delicious</h2>
-				<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur repellat laudantium et harum at quam quia, aliquam debitis molestias fugiat architecto neque id, voluptatibus unde ad sed corporis mollitia sit.</p>
-				<p class="price">Price:</p>
 
-			</div>
+          <button>See details</button>
+        </section>
+      </article>
+    </template>
+
+
+	<!--<template id="productTemplate">
+
+		<article class="products">
+
+
+
+			<section class="productbody">
+				<div class="imgbox" src=""></div>
+				<h2>best to start</h2>
+				<div class="icons">
+					<img class="vegetarian hidden" src="small/boef-sm.jpg">
+				</div>
+
+				<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<h3 class="price">50,-</h3>
+				<button>more details</button>
+
+			</section>
+
 		</article>
-		<article>
-
-			<div class="imgbox">
-
-			</div>
-			<div class="content">
-				<h2>Main Menu</h2>
-				<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur repellat laudantium et harum at quam quia, aliquam debitis molestias fugiat architecto neque id, voluptatibus unde ad sed corporis mollitia sit.</p>
-				<p class="price">Price:</p>
-			</div>
-		</article>
+	</template>
+	<main class="productlist">
+		<!--		<section id="starter"></section>-->
 
 
 	</main>

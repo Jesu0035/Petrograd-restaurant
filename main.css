@@ -1,0 +1,97 @@
+* {
+	box-sizing: border-box;
+}
+
+.header {
+	padding: 100px;
+	background-color: brown;
+	font-size: 70px;
+	text-align: center;
+	color: aliceblue;
+}
+
+.navbar {
+	padding: 10px;
+	font-size: 20px;
+	background: #1abc9c;
+	text-align: right;
+	text-decoration: none;
+
+
+}
+
+/*texto navbar*/
+.manzana2 {
+	float: right;
+	text-align: center;
+	overflow: hidden;
+	text-decoration: none;
+	align-content: flex-end;
+	color: white;
+
+
+}
+
+li {
+	display: inline-block
+}
+
+.manzana2:hover {
+	background-color: black;
+
+}
+
+
+main > section {
+	padding: 5px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-gap: 10px;
+}
+
+h2{
+	background-color:gainsboro;
+	grid-column: 1 / -1;
+}
+
+.product_image {
+	min-width:100%;
+	height:250px;
+	border-radius: 10px;
+	background-size: cover;
+
+
+}
+/*VEGETARIAN LOGO-FOTO*/
+.hidden {
+	display:none;
+
+}
+
+}
+.soldout {
+	position: absolute;
+	top: 90px;
+	left: 170px;
+	background-color: yellow;
+	font-size: 30px;
+
+}
+
+.products {
+
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+}
+
+article {
+	background-color:azure;
+	border-radius: 10px;
+	box-shadow: 10px 10px 78px -1px rgba(0, 0, 0, 0.25);
+}
+
+.content {
+	padding: 10px;
+}
