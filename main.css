@@ -1,6 +1,9 @@
 * {
 	box-sizing: border-box;
 }
+img {
+	max-width: 100%;
+}
 
 .header {
 	padding: 100px;
@@ -55,20 +58,24 @@ h2{
 }
 
 .product_image {
-	min-width:100%;
-	height:200px;
+
 	border-radius: 0px;
-	background-size: cover;
+
 
 
 }
 /*VEGETARIAN LOGO-FOTO*/
 .hidden {
-	display:none;
+	display: none;
 
 }
 
+.vegetarian {
+width: 50px;
+
 }
+
+
 .soldout {
 	position: absolute;
 	top: 90px;
@@ -95,3 +102,31 @@ article {
 .content {
 	padding: 20px;
 }
+/*The Modal long description menu*/
+
+.hide {
+  display:none;
+}
+.modal-background {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #7c1f17;
+  margin: 1em;
+  padding: 2em;
+}
+
+
+
+
+
+
+
+

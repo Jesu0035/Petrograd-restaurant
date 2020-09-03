@@ -9,6 +9,7 @@ init();
 function categoriesRecieved(cats) {
 	//createNavigation(cats);
 	createSections(cats);
+	fetchProducts();
 }
 
 function createSections(categories) {
@@ -25,18 +26,21 @@ function createSections(categories) {
 	})
 }
 
+function fetchProducts() {
+	fetch("https://kea-alt-del.dk/t5/api/productlist")
 
-fetch("https://kea-alt-del.dk/t5/api/productlist")
+		.then(function (response) {
+			console.log(response)
+			return response.json();
+		})
 
-	.then(function (response) {
-		console.log(response)
-		return response.json();
-	})
+		.then(function (data) {
+			console.log(data)
+			dataReceived(data)
+		})
 
-	.then(function (data) {
-		console.log(data)
-		dataReceived(data)
-	})
+}
+
 
 function dataReceived(products) {
 	products.forEach(showProduct)
@@ -49,12 +53,12 @@ function showProduct(myProduct) {
 	const myCopy = temp.cloneNode(true);
 
 	const img = myCopy.querySelector(".product_image");
-	img.setAttribute("src",`https://kea-alt-del.dk/t5/site/imgs/medium/${myProduct.image}-md.jpg`)
+	img.setAttribute("src", `https://kea-alt-del.dk/t5/site/imgs/medium/${myProduct.image}-md.jpg`)
 
 
 	myCopy.querySelector("h2").textContent = myProduct.name;
 
-	myCopy.querySelector("h3").textContent = myProduct.price;
+	myCopy.querySelector("h3").textContent = myProduct.price + "dkk";
 
 	myCopy.querySelector("p").textContent = myProduct.shortdescription;
 
@@ -63,6 +67,23 @@ function showProduct(myProduct) {
 		console.log("veg");
 		myCopy.querySelector(".vegetarian").classList.remove("hidden");
 	}
+	//ventana modal
+	myCopy.querySelector("button").addEventListener("click", () => {
+		fetch(`https://kea-alt-del.dk/t5/api/product?id=${myProduct.id}`)
+			.then(res => res.json())
+			.then(showDetails);
+	});
+
+	const modal = document.querySelector(".modal-background");
+	//once we have our data, ....
+	function showDetails(data) {
+
+		modal.querySelector(".modal-name").textContent = data.name;
+		modal.querySelector(".modal-description").textContent = data.longdescription;
+		//...
+		modal.classList.remove("hide");
+	}
+
 
 	//CONDITION IF MY PRODUCTU IS SOLD OUT, text that appear over the card.
 	if (myProduct.soldout) {
@@ -81,4 +102,12 @@ function showProduct(myProduct) {
 
 
 //MODAL
+//close the modal when clicked
+
+modal.addEventListener("click", () => {
+	modal.classList.add("hide");
+});
+
+
+
 //CREATE A SINGLE HIDDEN ELEMENT
