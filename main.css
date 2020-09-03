@@ -1,6 +1,12 @@
 * {
 	box-sizing: border-box;
+
 }
+
+body {
+	background-color: currentColor;
+}
+
 img {
 	max-width: 100%;
 }
@@ -46,14 +52,14 @@ li {
 
 
 main > section {
-	padding: 5px;
+	padding: 15px;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+	grid-gap: 30px;
 }
 
-h2{
-	background-color:gainsboro;
+h2 {
+	background-color: floralwhite;
 	grid-column: 1 / -1;
 }
 
@@ -61,9 +67,8 @@ h2{
 
 	border-radius: 0px;
 
-
-
 }
+
 /*VEGETARIAN LOGO-FOTO*/
 .hidden {
 	display: none;
@@ -71,62 +76,67 @@ h2{
 }
 
 .vegetarian {
-width: 50px;
+	width: 50px;
+	float: right;
 
 }
-
 
 .soldout {
 	position: absolute;
-	top: 90px;
-	left: 170px;
-	background-color: yellow;
+	top: 10px;
+	left: 10px;
+	background-color: red;
 	font-size: 30px;
+	color: black;
+
 
 }
 
-.products {
+.productbody_button {
 
+	background-color: grey;
+	color: whitesmoke;
+	border: 0;
+	padding: 2px;
+	font-size: 15px;
+	cursor: pointer;
 	position: relative;
-	display: flex;
-	flex-direction: column;
 
 }
+
 
 article {
-	background-color:azure;
+	background-color: azure;
 	border-radius: 5px;
 	box-shadow: 10px 10px 78px -1px rgba(0, 0, 0, 0.25);
+	position: relative;
+	padding: 15px;
+
 }
 
 .content {
-	padding: 20px;
+	padding: 50px;
 }
+
 /*The Modal long description menu*/
 
 .hide {
-  display:none;
+	display: none;
 }
+
 .modal-background {
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	z-index: 10;
+	left:0px;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
 }
+
 .modal-content {
-  background-color: #fefefe;
-  border: 1px solid #7c1f17;
-  margin: 1em;
-  padding: 2em;
+	background-color: #fefefe;
+	border: 1px black;
+	margin: 18em;
+	padding: 2em;
 }
-
-
-
-
-
-
-
-

@@ -83,6 +83,14 @@ function showProduct(myProduct) {
 		//...
 		modal.classList.remove("hide");
 	}
+	if (!myProduct.discount){
+		myCopy.querySelector(".data_discount").classList.add("hidden")
+	}
+
+
+	if (myProduct.vegetarian){
+		myCopy.querySelector(".vegetarian").classList.remove("hidden")
+	}
 
 
 	//CONDITION IF MY PRODUCTU IS SOLD OUT, text that appear over the card.
@@ -98,15 +106,17 @@ function showProduct(myProduct) {
 
 	parentElem.appendChild(myCopy);
 
+	modal.addEventListener("click", () => {
+	modal.classList.add("hide");
+});
+
 }
 
 
 //MODAL
 //close the modal when clicked
 
-modal.addEventListener("click", () => {
-	modal.classList.add("hide");
-});
+
 
 
 
