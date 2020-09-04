@@ -85,13 +85,36 @@ h2 {
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	background-color: red;
+	background-color: rgba(200,200,50,0.8);
 	font-size: 30px;
 	color: black;
 
 
 }
+.prices> * {
+	margin:2px;
+}
+/*.data_discount{
+	background: rgba(200,200,50,0.8);
+}*/
 
+.new-price{
+	background: rgba(200,200,50,0.8);
+	padding: 1px;
+	font-size: 20px;
+	text-align: center;
+}
+.old-price{
+	font-size: 20px;
+
+	text-align: center;
+}
+.productbody {
+	height:100%;
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
 .productbody_button {
 
 	background-color: grey;
@@ -101,6 +124,7 @@ h2 {
 	font-size: 15px;
 	cursor: pointer;
 	position: relative;
+	margin-top:auto;
 
 }
 
@@ -111,9 +135,14 @@ article {
 	box-shadow: 10px 10px 78px -1px rgba(0, 0, 0, 0.25);
 	position: relative;
 	padding: 15px;
-
+	display:flex;
+	flex-direction: column;
 }
 
+.old-price{
+	text-decoration: line-through;
+	color: grey;
+}
 .content {
 	padding: 50px;
 }
