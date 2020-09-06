@@ -1,84 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title></title>
 	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
 </head>
-<header>
-	<div class="header"> PETROGRAD</div>
+<!---<header id="header">
+
+	<div class="header"> PETROGRAD Restaurant</div>
 
 	<nav class="navbar">
 
-		<li><a class="manzana2" href="#"> Home</a> </li>
-		<li><a class="manzana2" href="#"> about</a> </li>
-		<li><a class="manzana2" href="#"> Menu</a> </li>
+		<a class="manzana2" href="#"> Menu</a>
+		<a class="manzana2" href="#"> Start</a>
+
 
 	</nav>
 
-</header>
+</header>--->
 
 
 <body>
-	<main class="productlist">
-		<template id="productTemplate">
-
-			<article class="products">
-
-				<img class="product_image" src="https://kea-alt-del.dk/t5/site/imgs/medium//guzni-md.jpg" alt="" />
-
-				<div class="icons">
-
-					<img class="vegetarian hidden" src="fotos/6850673.png" alt="vegetarian">
-				</div>
+<div class="header"> PETROGRAD Restaurant</div>
 
 
-				<section class="productbody">
-					<h2 class="data_name">Some really delisious dish</h2>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Voluptatum, velit inventore. Architecto nihil quis temporibus aut.
-					</p>
-					<h3 class="data_price">50,-</h3>
-					<h4 class="data_discount">Discount!</h4>
+	<header>
+
+
+		<nav class="navbar" >
+			<a href="#"> </a>
+
+			<a href="#starter"> Starter</a>
+			<a href="#main"> Main</a>
+			<a href="#dessert"> Dessert</a>
+			<a href="#drinks"> Drinks</a>
+			<a href="#sideorders"> sideorders</a>
+		</nav>
+</header>
+		<main class="productlist">
+			<template id="productTemplate">
+
+				<article class="products">
+
+					<img class="product_image" src="https://kea-alt-del.dk/t5/site/imgs/medium//guzni-md.jpg" alt="" />
+
+					<div class="icons">
+
+						<img class="vegetarian hidden" src="fotos/6850673.png" alt="vegetarian">
+					</div>
+
+
+					<section class="productbody">
+
+						<h2 class="data_name">Some really delisious dish</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Voluptatum, velit inventore. Architecto nihil quis temporibus aut.
+						</p>
+
+
+						<div class="prices">
+							<h4 class="data_discount"><span></span>% discount </h4>
+							<h4 class="price new-price">Dkk 99,50</h4>
+							<h4 class="price old-price">Dkk 199,50</h4>
+						</div>
+
+						<button class="productbody_button">Read more... </button>
+
+					</section>
+				</article>
+			</template>
 
 
 
-					<div class="prices">
-					<h4 class="data_discount"><span>50</span>% discount </h4>
-					<h4 class="price new-price">Dkk 99,50</h4>
-					<h4 class="price old-price">Dkk 199,50</h4>
-</div>
+		</main>
+		<script src="script.js"></script>
+		<footer>footer</footer>
 
-					<button class="productbody_button">Read more... </button>
-
-				</section>
-			</article>
-		</template>
-
-
-
-	</main>
-	<script src="script.js"></script>
-	<footer>footer</footer>
-
-	<div class="modal-background hide">
-		<div class="modal-content">
-			<h3 class="modal-name">NAME</h3>
-			<img src="" alt="" class="modal-image" />
-			<p class="modal-description">LONG DESCRIPTION</p>
-			<h4 class="modal-price">Bon Appetit</h4>
+		<div class="modal-background hide">
+			<div class="modal-content">
+				<h3 class="modal-name">NAME</h3>
+				<img src="" alt="" class="modal-image" />
+				<p class="modal-description">LONG DESCRIPTION</p>
+				<h4 class="modal-price">Bon Appetit</h4>
+			</div>
 		</div>
-	</div>
-</body></html>
+</body>
 
-
-
-
-
-
-
-
-
-
+</html>

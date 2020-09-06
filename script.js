@@ -6,10 +6,25 @@ function init() {
 }
 init();
 
-function categoriesRecieved(cats) {
+function categoriesRecieved (cats) {
 	//createNavigation(cats);
+	createNavigation(cats);
 	createSections(cats);
 	fetchProducts();
+}
+
+
+function createNavigation(categories) {
+	categories.forEach( cat => {
+
+		const a = document.createElement("a");
+		a.TextContent = cat
+		a.setAttribute("href",`#${cat}`)
+		document.querySelector("nav").appendChild(a);
+
+
+	})
+
 }
 
 function createSections(categories) {
@@ -58,6 +73,7 @@ function showProduct(myProduct) {
 
 	myCopy.querySelector("h2").textContent = myProduct.name;
 
+
 	//myCopy.querySelector("h3").textContent = myProduct.price + "dkk";
 
 	myCopy.querySelector("p").textContent = myProduct.shortdescription;
@@ -84,16 +100,16 @@ function showProduct(myProduct) {
 		modal.classList.remove("hide");
 	}
 
-//DISCOUNT1
-	if (!myProduct.discount){
+	//DISCOUNT1
+	if (!myProduct.discount) {
 		myCopy.querySelector(".data_discount").classList.add("hidden")
 	}
-//VEGGETARIAN
+	//VEGGETARIAN
 
-	if (myProduct.vegetarian){
+	if (myProduct.vegetarian) {
 		myCopy.querySelector(".vegetarian").classList.remove("hidden")
 	}
-//DISCOUNT DISCOUNT
+	//DISCOUNT DISCOUNT
 
 	//myCopy.querySelector('.data_price').textContent = myProduct.price;
 	const discountSpanEl = myCopy.querySelector(`.data_discount span`);
@@ -102,9 +118,9 @@ function showProduct(myProduct) {
 	const newPriceElem = myCopy.querySelector(`.new-price`);
 	const oldPriceElem = myCopy.querySelector(`.old-price`);
 
-	if (myProduct.discount && !myProduct.soldout){
+	if (myProduct.discount && !myProduct.soldout) {
 		discountSpanEl.textContent = myProduct.discount;
-		oldPriceElem.textContent ="Kr." + price + ",-";
+		oldPriceElem.textContent = "Kr." + price + ",-";
 
 		price = price - myProduct.discount / 100 * price;
 
@@ -113,9 +129,9 @@ function showProduct(myProduct) {
 		discountSpanEl.parentElement.remove();
 	}
 
-	newPriceElem.textContent = Math.floor(price)+",-";
-	if(myProduct.discount){
-		newPriceElem.textContent = "New Price: " + Math.floor(price)+",-";
+	newPriceElem.textContent = Math.floor(price) + ",-";
+	if (myProduct.discount) {
+		newPriceElem.textContent = "New Price: " + Math.floor(price) + ",-";
 	}
 
 	//CONDITION IF MY PRODUCTU IS SOLD OUT, text that appear over the card.
@@ -132,8 +148,8 @@ function showProduct(myProduct) {
 	parentElem.appendChild(myCopy);
 
 	modal.addEventListener("click", () => {
-	modal.classList.add("hide");
-});
+		modal.classList.add("hide");
+	});
 
 
 
