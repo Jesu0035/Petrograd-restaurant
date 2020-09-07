@@ -6,7 +6,7 @@ function init() {
 }
 init();
 
-function categoriesRecieved (cats) {
+function categoriesRecieved(cats) {
 	//createNavigation(cats);
 	createNavigation(cats);
 	createSections(cats);
@@ -15,11 +15,11 @@ function categoriesRecieved (cats) {
 
 
 function createNavigation(categories) {
-	categories.forEach( cat => {
-
+	console.log(categories);
+	categories.forEach(cat => {
 		const a = document.createElement("a");
-		a.TextContent = cat
-		a.setAttribute("href",`#${cat}`)
+		a.textContent = cat;
+		a.setAttribute("href", `#${cat}`);
 		document.querySelector("nav").appendChild(a);
 
 
